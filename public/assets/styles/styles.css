@@ -1,0 +1,448 @@
+/* --- Reseteo y Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Fuente por defecto */
+    color: #222;
+    background-repeat: no-repeat;
+    background-size: contain;  /* Mantiene proporciones sin recortar */
+    background-position: center top; /* Alinea arriba y centrado */
+    background-color: #f0f0f0; /* Color de fondo para espacios sobrantes */
+    /* Espacio en la parte superior para que el contenido no quede debajo del header fijo */
+    padding-top: 120px; 
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: inherit; /* Los enlaces heredan el color de su contenedor */
+}
+
+ul {
+    list-style: none; /* Quita los puntos de las listas */
+}
+
+/* --- Estilos de la Cabecera (Header) --- */
+.main-header {
+    background-color:#ffffff;/* Color de fondo oscuro */
+    /* Color de texto*/
+    padding: 10px; /* Espaciado interno (arriba/abajo | izquierda/derecha) */
+    /* Posicionamiento fijo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+
+    /* Flexbox para alinear logo y navegación */
+    display: flex;
+    justify-content: space-between; /* Empuja los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* --- Estilos del Logo --- */
+.logo {
+    height: 80px;
+}
+
+.fa-gears{
+    font-size: 30px; /* Tamaño del icono */
+    color: #222; /* Color del icono */
+    padding-right: 40px; /* Espacio a la derecha del icono */
+}
+
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Estilos de la Navegación --- */
+.main-nav ul {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    color: #222;
+    padding-left: 0; /* Asegura que no haya padding inicial */
+    width: 100%; /* Hacemos que la lista ocupe todo el espacio de la nav */
+}
+
+.main-nav li {
+    padding: 0 15px;
+}
+.main-nav a {
+    font-family: 'Montserrat', sans-serif; /* Fuente con serifa como en la imagen */
+    font-size: 1.1rem;
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto al pasar el cursor sobre los enlaces de navegación */
+.main-nav a:hover {
+    color: #a0a0a0; /* Cambia el color a un gris más claro */
+}
+
+
+/*ELEMENTOS PAGINA*/
+.content-page {
+    display: grid;
+}
+
+/*container*/
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.titulo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+    color: #222;
+}
+
+.subtitulo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 48x;
+    line-height: 70px;
+    color: gray;
+}
+
+
+.img-psicologa{
+    height: 800px; /* Altura de la imagen */
+}
+
+.descargalo{/* Asegura que el botón esté al final */
+    text-align: center;
+    background-color: #2ecbb161; /* Color de fondo */
+    color: #222; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.google-play{
+    width: 200px; /* Ancho del botón */
+    height: 80px; /* Altura del botón */
+    margin-top: 15px; /* Espacio superior */
+}
+
+.appstore{
+    width: 190px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+}
+
+
+/*carts*/
+
+.carts {
+    margin: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card__image{
+    width: 350px;
+    height: 240px;
+    border-radius: 25px 25px 70px 0px;
+}
+
+.card__content {
+    padding: 25px;
+}
+
+.card__link {
+    display: flex;
+    align-items: center; /* Centra horizontalmente los hijos (incluido card__link) */
+    text-align: center;
+    background-color: #3acf6c;
+    border-radius: 25px 0px 25px 0px;
+    height: 60px;
+    width: 150px;
+    padding: 1rem;
+    color: #ffffff;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.texto-lateral {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px; ;
+    max-width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    align-self: center;
+}
+/*FOOTER*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.boxone {
+    margin-left: 40px;
+    width: 340px;
+    font-size: 14px;
+}
+
+.boxone p {
+    color: #a0a0a0;
+}
+
+.textos-footer {
+    display: flex; /* Hace que los <li> se muestren en línea como columnas */
+    flex-direction: column;
+    gap: 8px; /* Agrega una separación de 5px entre los elementos <li> */
+    list-style: none; /* Opcional: elimina los puntos de la lista */
+    padding: 0; /* Opcional: elimina el padding por defecto */
+}
+
+.titulos-footer {
+    color: rgb(88, 88, 88);
+    font-weight: 600;
+}
+
+.social-icons {
+    margin: 30px 40px 0px 0px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Separación de 10px entre íconos */
+}
+
+.social-icons i {
+    font-size: 30px; /* Tamaño de 20px para los íconos */
+}
+
+.formulario-contacto {
+    background-color: white;
+    max-width: 600px;     /* Un poco más ancho para que respire mejor */
+    margin: 80px auto;    /* 80px de espacio arriba/abajo, y 'auto' para centrarlo */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.formulario-contacto fieldset {
+    border: none; /* Quitamos el borde por defecto del fieldset */
+    padding: 0;
+}
+
+.formulario-contacto h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.formulario-contacto .Form-control {
+    margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+    display: block; /* Hacemos que la etiqueta ocupe su propia línea */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto input[type="tel"],
+.formulario-contacto input[type="date"],
+.formulario-contacto input[type="password"] { 
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box; 
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif; /* Usamos la misma fuente */
+    font-size: 1rem;
+}
+
+.formulario-contacto input[type="text"]:focus,
+.formulario-contacto input[type="email"]:focus,
+.formulario-contacto textarea:focus {
+    border-color: #2ecbb1; /* Resaltamos el borde al hacer clic */
+    outline: none;
+}
+
+.formulario-contacto .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #3acf6c; /* El verde de tu página principal */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contacto .submit-btn:hover {
+    background-color: #27a552; /* Un verde un poco más oscuro al pasar el mouse */
+}
+
+.pagina-contacto-main {
+    padding: 60px 20px; /* Espacio entre el header/footer y el formulario */
+}
+
+.subtitulo-formulario {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Y una pequeña corrección para el campo de teléfono */
+.formulario-contacto input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+
+.main-nav .registro {
+    margin-left: auto;
+}
+
+.main-nav .login{
+    padding-right: 0;
+}
+
+/* Estilos para la página Acerca */
+.contenido-acerca h3 {
+    color: #3acf6c;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contenido-acerca p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.lista-servicios {
+    color: #555;
+    line-height: 1.8;
+    padding-left: 0;
+}
+
+.lista-servicios li {
+    margin-bottom: 8px;
+}
+
+/* Estilos para la página Acerca */
+.contenido-acerca h3 {
+    color: #3acf6c;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contenido-acerca p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.lista-servicios {
+    color: #555;
+    line-height: 1.8;
+    padding-left: 0;
+}
+
+.lista-servicios li {
+    margin-bottom: 8px;
+}
+
+/* Estilos para la página Reseñas*/
+.reseñas {
+    background-color: #ffffff;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.reseñas__titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 50px;
+}
+
+.reseñas__contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.reseña {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.reseña__imagen {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.reseña__texto {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.reseña__autor {
+    font-weight: bold;
+    color: #3acf6c;
+    font-size: 0.95rem;
+}
